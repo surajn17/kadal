@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Deploy Web Server') {
       steps {
-        sh 'ssh ubuntu@54.250.115.66 sudo apt update'
+        sh 'ssh ubuntu@54.250.115.66 sudo apt-get update'
         sh 'ssh ubuntu@54.250.115.66 sudo apt install -y apache2'
         sh 'ssh ubuntu@54.250.115.66 sudo systemctl start apache2'
         sh 'ssh ubuntu@54.250.115.66 sudo systemctl enable apache2'
