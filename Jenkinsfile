@@ -4,7 +4,6 @@ pipeline {
   stages {
     stage('Deploy Web Server') {
       steps {
-        sh 'sudo apt update'
         sh 'sudo apt install -y apache2'
         sh 'sudo systemctl start apache2'
         sh 'sudo systemctl enable apache2'
